@@ -4,6 +4,8 @@
 }
 
 .container {
+  display: grid;
+  grid-template: 100px 50px 1000px 50px / 25% 75%;
   text-align: center;
 }
 
@@ -16,25 +18,32 @@
 }
 
 .header {
+  grid-area: 1 / 1 / 2 / -1;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
   background-color: #393f4d;
 }
 
 .logo {
+  justify-self: start;
 }
 
 .menu {
 }
 
 .menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.menu ul,
 .menu li {
   font-size: 16px;
+  list-style-type: none;
 }
 
 .sidebar {
-  background-color: #FF7755;
+  grid-area: 2 / 1 / 4 / 2;
+  background-color: #ff7755;
 }
 
 .sidebar .photo {
@@ -45,7 +54,7 @@
   border-radius: 10px;
 }
 
-.photo  {
+.photo {
 }
 
 .sidebar .side-content {
@@ -56,7 +65,8 @@
 }
 
 .nav {
-  background-color: #FF7755;
+  grid-column: 2 / -1;
+  background-color: #ff7755;
 }
 
 .nav ul {
@@ -68,6 +78,7 @@
 }
 
 .article {
+  grid-area: 3 / 2 / 4 / -1;
   background-color: #bccbde;
 }
 
@@ -79,7 +90,7 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-align: center;
 }
@@ -96,10 +107,11 @@
 }
 
 .footer {
+  grid-column: 1 / -1;
   background-color: #393f4d;
 }
 
 .footer p {
   font-size: 13px;
-  font-weight: normal;  
+  font-weight: normal;
 }
